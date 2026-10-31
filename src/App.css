@@ -2,3 +2,19 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+
+@keyframes toast-progress {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.toast-progress {
+    transform-origin: right;
+    animation: toast-progress 5s linear forwards;
+}

@@ -45,3 +45,27 @@ export const getScheduleByDates = (departId, dates) => {
 export const updateScheduleByDates=(departId,schedules)=>{
     return api.put(`/hospitals/update_schedule/${departId}`,schedules)
 }
+
+//get the departments profile 
+
+export const getDepartmentProfile=(departId)=>{
+    return api.get(`/hospitals/depart_profile/${departId}`)
+}
+
+//update department profile
+
+export const updateDepartmentProfile=(depart_id,info)=>{
+    return api.put(`/hospitals/update_department/${depart_id}`,info)
+}
+
+//delete the department
+
+export const deleteDepartment=(depart_id)=>{
+    return api.delete(`/hospitals/delete_department/${depart_id}`)
+}
+
+// change the department password
+
+export const departPasswordChange=(depart_id,pass)=>{
+    return api.put(`/hospitals/change_depart_password/${depart_id}`,pass)
+}

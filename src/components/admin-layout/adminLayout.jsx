@@ -40,9 +40,8 @@ export default function AdminLayout() {
         
           <div className="flex-1 overflow-auto flex flex-col">
              <main className="flex-1 p-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-      <h1 className="text-3xl font-light text-gray-800 dark:text-gray-100 mb-6">Home</h1>
-      {/* Content body goes here */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 min-h-[400px] border border-gray-100 dark:border-gray-700 transition-colors duration-300">
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 min-h-[500px] border border-gray-100 dark:border-gray-700 transition-colors duration-300">
         <div className="text-gray-500 dark:text-gray-400">
           <Outlet/>
         </div>
