@@ -130,6 +130,14 @@ const handleClick = async () => {
                         Profile
                     </button></NavLink>
 
+                    <NavLink to={`mydepartments/gallary/${curElem.id}`}>
+                     <button
+                        onClick={() => handleItemClick("Registration Gallary")}
+                        className={subMenuButtonClass("Registration Gallary")}
+                    >
+                        <span className="mr-2">•</span>
+                        Gallary
+                    </button></NavLink>
                 </div>
             )}
 

@@ -13,7 +13,7 @@ const Logout = ({menuButtonClass}) => {
   return (
     <>
      <button onClick={handleLogout}
-          className={menuButtonClass("Gallery")}
+          className={menuButtonClass("Logout")}
         >
             <span className="w-5 h-5 mr-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-door-open" viewBox="0 0 16 16">

@@ -116,6 +116,7 @@ const SidebarIndex = () => {
         </button></NavLink>
 
         {/* Gallery */}
+        <NavLink to="/gallary">
         <button
           onClick={() => handleItemClick("Gallery")}
           className={menuButtonClass("Gallery")}
@@ -134,7 +135,7 @@ const SidebarIndex = () => {
             />
           </svg>
           Gallery
-        </button>
+        </button></NavLink>
 
         <Logout menuButtonClass={menuButtonClass}/>
       </nav>

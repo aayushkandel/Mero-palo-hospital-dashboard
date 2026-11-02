@@ -69,3 +69,77 @@ export const deleteDepartment=(depart_id)=>{
 export const departPasswordChange=(depart_id,pass)=>{
     return api.put(`/hospitals/change_depart_password/${depart_id}`,pass)
 }
+
+
+// update the thumbnail of the hospital
+
+export const updateHospitalThumbnail=(gallary_id)=>{
+    return api.put(`/hospitals/update_thumbnail/${gallary_id}`)
+}
+
+// upload images into hospital gallary
+
+export const uploadHospitalGallary=(images)=>{
+    return api.post("/hospitals/upload_gallery",images)
+}
+
+// delete hospital gallary images 
+
+export const deleteHospitalGallaryImages=(gallary_id)=>{
+    return api.delete(`/hospitals/delete_gallery/${gallary_id}`)
+}
+
+// get hospital thumbnail
+export const getHospitalThumbnail=()=>{
+    return api.get("/hospitals/get_thumbnail")
+}
+
+//get hospital gallary images
+export const getHospitalGallaryImages=()=>{
+    return api.get("/hospitals/get_gallery")
+}
+
+// Get department gallery
+export const getDepartmentGallary = (depart_id) => {
+    return api.get(`/hospitals/department/${depart_id}/get_gallery`);
+};
+
+
+// Upload department gallery images
+export const postDepartmentGallary = (depart_id, images) => {
+
+    const formData = new FormData();
+
+    images.forEach((image) => {
+        formData.append("files", image);
+    });
+
+    return api.post(
+        `/hospitals/department/${depart_id}/upload_gallery`,
+        formData
+    );
+};
+
+
+// Update department thumbnail
+export const updateDepartmentThumbnail = (depart_id, gallery_id) => {
+    return api.put(
+        `/hospitals/department/${depart_id}/update_thumbnail/${gallery_id}`
+    );
+};
+
+
+// Delete department gallery image
+export const deleteDepartmentImage = (depart_id, gallery_id) => {
+    return api.delete(
+        `/hospitals/department/${depart_id}/delete_gallery/${gallery_id}`
+    );
+};
+
+
+// Get department thumbnail
+export const getDepartmentThumbnail = (depart_id) => {
+    return api.get(
+        `/hospitals/department/${depart_id}/get_thumbnail`
+    );
+};
